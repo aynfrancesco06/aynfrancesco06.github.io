@@ -1,6 +1,6 @@
 baseURL: "https://aynfrancesco06.github.io/"
 locale: en-us
-title: "Ayn Del Rosario"
+title: "ayn"
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -22,10 +22,10 @@ outputs:
 params:
   env: production
   title: "Ayn Del Rosario"
-  description: "Portfolio and blog of Ayn Francesco Del Rosario, aspiring full stack developer"
+  description: "tech, games and life"
   author: "Ayn Francesco Del Rosario"
-  defaultTheme: auto        # auto | light | dark
-  disableThemeToggle: false
+  defaultTheme: dark        # auto | light | dark
+  disableThemeToggle: true
 
   ShowReadingTime: true
   ShowShareButtons: false
