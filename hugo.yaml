@@ -1,0 +1,96 @@
+baseURL: "https://aynfrancesco06.github.io/"
+locale: en-us
+title: "Ayn Del Rosario"
+theme: PaperMod
+
+enableRobotsTXT: true
+enableEmoji: true
+pagination:
+  pagerSize: 8
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# Needed for the Search page (JSON index) and RSS feed
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "Ayn Del Rosario"
+  description: "Portfolio and blog of Ayn Francesco Del Rosario, aspiring full stack developer"
+  author: "Ayn Francesco Del Rosario"
+  defaultTheme: auto        # auto | light | dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  hidemeta: false
+  hideSummary: false
+
+  # Home page: short intro with social links, recent posts underneath
+  homeInfoParams:
+    Title: "Hi, I'm Ayn 👋"
+    Content: >
+      Aspiring full stack developer interested in the many technologies of web development.
+      Browse my [projects](/projects/) or read the [blog](/posts/).
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/aynfrancesco06"
+    # - name: linkedin            # add your LinkedIn URL, then uncomment
+    #   url: "https://www.linkedin.com/in/your-handle/"
+    - name: email
+      url: "mailto:aynfrancesco@gmail.com"
+    - name: rss
+      url: "index.xml"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 50
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
